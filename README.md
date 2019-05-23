@@ -50,3 +50,4 @@ node index.js 学号 密码
 
 ## 效果图
 
+![](http://ww1.sinaimg.cn/large/00613kQPgy1g3bl8xwdvwj30xz0hrtbd.jpg)
