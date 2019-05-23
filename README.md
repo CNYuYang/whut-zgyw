@@ -45,3 +45,8 @@ npm install
 node index.js 学号 密码
 //如 node index.js 0121709360222 0121709360222
 ```
+
+
+
+## 效果图
+
