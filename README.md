@@ -32,4 +32,4 @@ node index.js 学号 密码
 
 ## 效果图
 
-![效果图](D:\nodejs\whut-zgyw\效果图.png)
+![效果图](效果图.png)
