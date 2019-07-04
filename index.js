@@ -4,9 +4,6 @@ const URL = "http://59.69.102.9/zgyw/index.aspx";
 const URL_ARTICLE = "http://59.69.102.9/zgyw/study/LearningContent.aspx?type=1&id=1&learningid=3073";
 let cookie = "";
 
-/*
- *登入网站并获取cookie
- */
 function login(stuNo, psw) {
     request(URL, (error, response, data) => {
         const $ = cheerio.load(data.toString());
@@ -15,7 +12,7 @@ function login(stuNo, psw) {
         request.post({
             url: URL,
             headers: {
-                "Cookie": cookie.toString()
+                "Cookie": cookie
             },
             form: {
                 "__VIEWSTATE": VIEWSTATE,
@@ -27,15 +24,11 @@ function login(stuNo, psw) {
     });
 }
 
-/*
- *刷分系统
- */
 async function f() {
     setTimeout(f, 60000);
     await request({
         url: URL_ARTICLE,
         headers: {
-            'Accept-Language': 'zh-CN,zh;q=0.9',
             'Cookie': cookie
         }
     }, () => {
@@ -43,7 +36,6 @@ async function f() {
     await request({
             url: URL,
             headers: {
-                'Accept-Language': 'zh-CN,zh;q=0.9',
                 'Cookie': cookie
             }
         },
@@ -60,9 +52,6 @@ async function f() {
         });
 }
 
-
-//判断输入学号和密码 
 const args = process.argv.splice(2);
 if (args.length != 2) console.log("请输入用户名和密码！");
-//执行程序
 f();
