@@ -12,7 +12,7 @@
 获取本项目：
 
 ```bash
-git clone https://github.com/Reyunn/whut-zgyw.git
+git clone https://github.com/CNYuYang/whut-zgyw.git
 ```
 
 安装依赖：
